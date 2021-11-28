@@ -5,6 +5,9 @@ cwlVersion: v1.1
 requirements:
 - class: DockerRequirement
   dockerPull: milaboratory/mixcr:3.0.13
+- class: ResourceRequirement
+  ramMin: 15258
+  coresMin: 12
 - class: InlineJavascriptRequirement
   expressionLib:
   - var default_output_prefix = function() {

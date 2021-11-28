@@ -4,7 +4,9 @@ class: CommandLineTool
 
 requirements:
 - class: ShellCommandRequirement
-
+- class: ResourceRequirement
+  ramMin: 3814
+  coresMin: 2
 
 hints:
 - class: DockerRequirement
