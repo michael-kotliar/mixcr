@@ -12,8 +12,13 @@ requirements:
   expressionLib:
   - var default_output_prefix = function() {
           if (inputs.output_prefix == ""){
-            var root = inputs.fastq_file.basename.split('.').slice(0,-1).join('.');
-            return (root == "")?inputs.fastq_file.basename:root;
+            if ( Array.isArray(inputs.fastq_file) ){
+              var root = inputs.fastq_file[0].basename.split('.').slice(0,-1).join('.');
+              return (root == "")?inputs.fastq_file[0].basename:root;
+            } else {
+              var root = inputs.fastq_file.basename.split('.').slice(0,-1).join('.');
+              return (root == "")?inputs.fastq_file.basename:root;
+            }
           } else {
             return inputs.output_prefix;
           }
