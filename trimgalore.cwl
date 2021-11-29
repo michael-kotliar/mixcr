@@ -5,7 +5,7 @@ class: CommandLineTool
 requirements:
 - class: ResourceRequirement
   ramMin: 15258
-  coresMin: 12
+  coresMin: 4
 - class: InlineJavascriptRequirement
   expressionLib:
   - var default_log_name = function() {

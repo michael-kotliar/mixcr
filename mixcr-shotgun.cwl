@@ -7,7 +7,7 @@ requirements:
   dockerPull: milaboratory/mixcr:3.0.13
 - class: ResourceRequirement
   ramMin: 15258
-  coresMin: 12
+  coresMin: 4
 - class: InlineJavascriptRequirement
   expressionLib:
   - var default_output_prefix = function() {
