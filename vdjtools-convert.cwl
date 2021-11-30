@@ -28,9 +28,11 @@ inputs:
 outputs:
 
   vdj_file:
-    type: File
+    type: File?
     outputBinding:
       glob: $(inputs.output_prefix + "." + inputs.clonotypes_file.basename + ".gz")
 
 
 baseCommand: ["vdjtools", "Convert", "--compress", "--software", "MiXcr"]
+
+successCodes: [1]

@@ -34,14 +34,16 @@ inputs:
 outputs:
 
   qstat_file:
-    type: File
+    type: File?
     outputBinding:
       glob: "*.qstat.txt"
 
   qstat_pdf:
-    type: File
+    type: File?
     outputBinding:
       glob: "*.qstat.pdf"
 
 
 baseCommand: ["vdjtools", "PlotQuantileStats"]
+
+successCodes: [1]

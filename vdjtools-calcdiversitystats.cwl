@@ -52,9 +52,14 @@ inputs:
 outputs:
 
   diversity_files:
-    type: File[]
+    type:
+      - "null"
+      - type: array
+        items: File
     outputBinding:
       glob: "*"
 
 
 baseCommand: ["vdjtools", "CalcDiversityStats"]
+
+successCodes: [1]

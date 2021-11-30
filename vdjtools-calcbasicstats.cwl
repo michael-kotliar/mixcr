@@ -34,9 +34,11 @@ inputs:
 outputs:
   
   basicstats_file:
-    type: File
+    type: File?
     outputBinding:
       glob: "*.basicstats.txt"
 
 
 baseCommand: ["vdjtools", "CalcBasicStats"]
+
+successCodes: [1]

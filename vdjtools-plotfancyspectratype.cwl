@@ -34,14 +34,16 @@ inputs:
 outputs:
   
   fancyspectra_file:
-    type: File
+    type: File?
     outputBinding:
       glob: "*.fancyspectra.txt"
 
   fancyspectra_pdf:
-    type: File
+    type: File?
     outputBinding:
       glob: "*.fancyspectra.pdf"
 
 
 baseCommand: ["vdjtools", "PlotFancySpectratype"]
+
+successCodes: [1]

@@ -99,35 +99,41 @@ outputs:
     outputSource: mixcr_shotgun/report_file
 
   vdj_file:
-    type: File
+    type: File?
     outputSource: vdjtools_convert/vdj_file
 
   basicstats_file:
-    type: File
+    type: File?
     outputSource: vdjtools_calcbasicstats/basicstats_file
 
   spectratype_files:
-    type: File[]
+    type:
+    - "null"
+    - type: array
+      items: File
     outputSource: vdjtools_calcspectratype/spectratype_files
 
   fancyspectra_file:
-    type: File
+    type: File?
     outputSource: vdjtools_plotfancyspectratype/fancyspectra_file
 
   fancyspectra_pdf:
-    type: File
+    type: File?
     outputSource: vdjtools_plotfancyspectratype/fancyspectra_pdf
   
   diversity_files:
-    type: File[]
+    type:
+    - "null"
+    - type: array
+      items: File
     outputSource: vdjtools_calcdiversitystats/diversity_files
 
   qstat_file:
-    type: File
+    type: File?
     outputSource: vdjtools_plotquantilestats/qstat_file
 
   qstat_pdf:
-    type: File
+    type: File?
     outputSource: vdjtools_plotquantilestats/qstat_pdf
 
 
